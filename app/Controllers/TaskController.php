@@ -72,4 +72,17 @@ class TaskController extends BaseController
         ]);
 
     }
+
+    public function getTasks(){
+        $t = new TaskModel();
+        $r =$t->select('*')->findAll();
+        return json_encode(["response"=>$r]);
+    }
+
+    private function genericResponse($data,$code){
+        return json_encode([
+           "data"=>$data,
+            "code"=>$code
+        ]);
+    }
 }
