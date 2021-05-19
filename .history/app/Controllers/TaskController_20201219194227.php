@@ -1,0 +1,26 @@
+<?php namespace App\Controllers;
+use App\Models\TaskModel;
+
+class TaskController extends BaseController
+{
+    public function store(){
+        $request = \Config\Services::request();
+		$title  = $request->getPost('title');
+		$description  = $request->getPost('description');
+        $data = [
+            'title' => $title,
+            'description' => $description
+        ];
+        $taskModel = new TaskModel();
+        $taskModel->insert($data);
+
+        echo json_encode([
+            "message" => "register crated"
+        ]);
+    }
+
+    public function read(){
+        $model = new TaskModel();
+        echo json_encode($model->findAll());
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "liorchamla/faker-prices",
+  "description": "Provides typical and credible prices for Faker (fzaninotto/faker) library",
+  "type": "library",
+  "minimum-stability": "stable",
+  "keywords": [
+    "faker",
+    "fixtures",
+    "prices"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lior Chamla",
+      "email": "lchamal@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Liior\\Faker\\": "src/Faker"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Liior\\Tests\\Faker\\": "tests/Faker"
+    }
+  },
+  "require": {
+    "fzaninotto/faker": "^1.8"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.2"
+  }
+}
