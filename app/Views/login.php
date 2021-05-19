@@ -9,6 +9,7 @@
 <!--<script type="text/javascript" charset="utf-8"  src="public/assets/js/login.js" ></script>-->
 <script src="<?php echo base_url()?>/assets/js/login.js"></script>
 <!--</script>-->
+    <h1>Hello world</h1>
 </body>
 </html>
 
